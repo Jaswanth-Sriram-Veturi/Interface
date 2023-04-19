@@ -1,0 +1,45 @@
+.fields-wrapper .field-wrapper {
+	position: relative;
+}
+
+.fields-wrapper > .field-wrapper:nth-child(1)::before,
+.fields-wrapper > .field-wrapper:nth-last-child(1)::before {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 20px;
+	transform: translateY(-50%);
+	background-color: #dfdfdf;
+	height: 1px;
+	width: 8px;
+}
+
+.fields-wrapper > .field-wrapper:nth-child(1)::after,
+.fields-wrapper > .field-wrapper:nth-last-child(1)::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 20px;
+	width: 1px;
+	height: 100%;
+	background-color: #dfdfdf;
+}
+
+.fields-wrapper > .field-wrapper:nth-last-child(1)::after {
+	top: 0px;
+	bottom: 20px;
+	height: 20px;
+}
+
+.field-wrapper:not(:nth-child(1))::before,
+.field-wrapper:not(:nth-last-child(1))::before {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	height: 100%;
+	width: 1px;
+	background-color: #dfdfdf;
+}
