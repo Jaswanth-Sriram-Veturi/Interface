@@ -44,7 +44,8 @@ const useTraverseTree = () => {
 			}
 			return { ...node, nestedFields: updatedNode };
 		};
-		return tree.map((node) => traverseNode(node, id));
+		const updatedTree = tree.map((node) => traverseNode(node, id));
+		return updatedTree.filter((node) => node !== null);
 	};
 
 	return { insertNode, updateNode, deleteNode };

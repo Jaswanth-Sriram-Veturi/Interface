@@ -18,6 +18,10 @@ const Interface = () => {
 		]);
 	};
 
+	const handleOnSave = () => {
+		console.log("interface", fields);
+	};
+
 	return (
 		<div className="interface-container">
 			<div className="interface">
@@ -50,6 +54,9 @@ const Interface = () => {
 					))}
 				</div>
 			</div>
+			<button className="save-btn" onClick={handleOnSave}>
+				Save
+			</button>
 		</div>
 	);
 };
